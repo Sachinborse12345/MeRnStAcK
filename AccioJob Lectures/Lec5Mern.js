@@ -431,33 +431,33 @@
 //     : "Sunday";
 // console.log(res);
 
-// let DayNumber = 2;
-// switch (DayNumber) {
-//   case 1:
-//     console.log("monday");
-//     break;
-//   case 2:
-//     console.log("Tuesday");
-//     break;
-//   case 3:
-//     console.log("Wendsday");
-//     break;
-//   case 4:
-//     console.log("Thursday");
-//     break;
-//   case 5:
-//     console.log("Friday");
-//     break;
-//   case 6:
-//     console.log("Saturday");
-//     break;
-//   case 7:
-//     console.log("Sunday");
-//     break;
-//   default:
-//     console.log("Invalid Days");
-//     break;
-// }
+let DayNumber = 2;
+switch (DayNumber) {
+    case 1:
+        console.log("monday");
+        break;
+    case 2:
+        console.log("Tuesday");
+        break;
+    case 3:
+        console.log("Wendsday");
+        break;
+    case 4:
+        console.log("Thursday");
+        break;
+    case 5:
+        console.log("Friday");
+        break;
+    case 6:
+        console.log("Saturday");
+        break;
+    case 7:
+        console.log("Sunday");
+        break;
+    default:
+        console.log("Invalid Days");
+        break;
+}
 
 //Make grading system using switch case
 
