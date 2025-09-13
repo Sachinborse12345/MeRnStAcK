@@ -1,11 +1,8 @@
-let num = 6;
-
-for (let i = 1; i <= num; i++) {
-    let str = "";
-    for (let j = 1; i <= num; j++) {
-        str += j + " ";
-
+function fact(n) {
+    let fact = 1;
+    for (let i = 1; i <= n; i++) {
+        fact *= i;
     }
-    console.log(str);
+    console.log(fact);
 
 }
