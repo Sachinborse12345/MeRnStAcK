@@ -1,8 +1,12 @@
-function fact(n) {
-    let fact = 1;
-    for (let i = 1; i <= n; i++) {
-        fact *= i;
+function ele(arr2) {
+    if (arr2.includes(10)) {
+
+        arr2[arr2.indexOf(10)] = 14;
     }
-    console.log(fact);
+    console.log(arr2);
+
 
 }
+ele(arr2);
+
+console.log(arr2.lastIndexOf(5));
