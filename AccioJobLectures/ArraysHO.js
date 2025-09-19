@@ -86,7 +86,6 @@ let arr = [2, 10, 6, 4, 9];
 // console.log(arr.slice(1));
 // console.log(arr.slice());
 
-
 //Splice
 //console.log(arr.splice(1, 3));// affects the original array anf delete that portion.
 
@@ -193,38 +192,4 @@ arr = [1, 2, "123", 2.344, true, [3, 4, "five", [2, 5, "PrintMe"]]];
 // }
 // let missingNo = n - sum;
 // console.log("missing No is ", missingNo);
-
-//Homework subarrays printing 
-// function printSubarrays(arr) {
-//     let n = arr.length;
-//     for (let i = 0; i < n; i++) {
-//         let subarr = [];
-//         for (let j = i; j < n; j++) {
-//             subarr.push(arr[j]);
-//             console.log(subarr.join(" "));
-
-
-//         }
-//     }
-// }
-// printSubarrays([1, 2, 3, 4, 5, 6]);
-
-//print sum of all subarrays
-//Write the function to print the subarray whose sum is targated sum
-//input[1, 4, 5, 7, 3, 2] t=15;
-function printSubarrays(arr, k) {// Time complexity=O(n*2)
-    let n = arr.length;
-    for (let i = 0; i < n; i++) {
-        let subarr = [];
-        let sum = 0;
-        for (let j = i; j < n; j++) {
-            if (subarr.push(arr[j]).length == k) {
-                sum += arr[j];
-            };
-        } console.log(sum);
-    }
-}
-printSubarrays([7, 4, 6, 8, 5], 3);
-
-
 

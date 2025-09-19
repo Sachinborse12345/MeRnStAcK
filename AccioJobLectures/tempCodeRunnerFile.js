@@ -1,12 +1,5 @@
-function ele(arr2) {
-    if (arr2.includes(10)) {
+let left = arr[0], right = num.length - 1;
 
-        arr2[arr2.indexOf(10)] = 14;
-    }
-    console.log(arr2);
-
-
-}
-ele(arr2);
-
-console.log(arr2.lastIndexOf(5));
+// while (right > left) {
+//     num[left], num[right] = num[right], num[left];
+// }
