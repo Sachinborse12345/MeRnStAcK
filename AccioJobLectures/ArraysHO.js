@@ -5,191 +5,185 @@
 //Arrays are non primitive data type.
 //we can declare array with const variable but still we can change its elements.
 
+const names = ["sachin", "ganesh", "Tejas", "Akash"];
+//console.log(name);
+for (let i = 0; i < names.length; i++) {
+    console.log(names[i]);
+}
+console.log("---------------------------------------------------------------------");
 
-//const A=[1,2,3,4,5];
-// const names = ["Name1", "Name2", "Name3"];
-// console.log(names);
-// for (let i = 0; i < names.length; i++) {
-//     console.log(names[i]);
-// }
+//find the sum of all odd elements.
+let arr = [2, 3, 5, 6, 7, 8, 9];
 
+function oddSum(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 != 0) {
+            sum += arr[i];
+        }
+    } console.log(sum);
 
-// //Question-> find the sum of all odd elements
-// const arr = [1, 2, 3, 4, 5, 6, 7, 8];
-// function SumOddEle(arr) {// Time Complexity--->O(7)
-//     let n = arr.length;
-//     let oddsum = 0, evensum = 0;
-//     for (let i = 0; i < arr.length; i++) {
-//         if (arr[i] % 2 == 0) {
-//             oddsum += arr[i];
-//         } else {
-//             evensum += arr[i];
-//         }
-//     }
-//     return Math.abs(oddsum - evensum);
-// }
-// console.log(SumOddEle(arr));
-
+}
+oddSum(arr);
+console.log("---------------------------------------------------------------------");
 
 //FizzBuzz
-// const arr = [5, 15, 1, 3, 20, 18, 6, 22, 100, 60];
-// let n = arr.length;
-// function FB(arr) {
-//     for (let i = 0; i < n; i++) {
-//         if (arr[i] % 3 == 0 && arr[i] % 5 == 0) {
-//             console.log("FizzBuzz");
-
-//         } else if (arr[i] % 5 == 0) {
-//             console.log("Buzz");
-//         } else if (arr[i] % 3 == 0) {
-//             console.log("Fizz");
-//         } else {
-//             console.log(arr[i]);
-//         }
-//     }
-// }
-// FB(arr);
+function fizzBuzz(arr) {
 
 
-//Arrays elements adding and deletion
-const arr1 = [1, 2, 234, 43, 5, 34, 5,];
-//adding from front
-// arr1.unshift(1);
-//adding from last
-// arr1.push(1);
-// console.log(arr1);
+    arr = [1, 2, 5, 15, 3, 18, 32, 60, 30, 3, 10];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 5 == 0 && arr[i] % 3 == 0) {
+            console.log("FizzBuzz");
 
-//deletion
+        } else if (arr[i] % 5 == 0) {
+            console.log("Fizz");
 
-// returns index of element.
-//console.log(arr1.indexOf(234));
+        } else if (arr[i] % 3 == 0) {
+            console.log("Buzz");
 
-//find and update the value of 3rd element 14 using indexOf() and include()
+        } else {
+            console.log(arr[i]);
+        }
+    }
+}
+fizzBuzz(arr);
+console.log("---------------------------------------------------------------------");
 
-// const arr2 = [1, 2, 234, 43, 5, 34, 5, 10];
-// function ele(arr2) {
-//     if (arr2.includes(10)) {
+//methods of arrays
+//push
+arr = [1, 2, 3];
+arr.push(1, 2, 3, 4);
+console.log(arr);
+//pop
+arr = [1, 2, 3];
+arr.pop(1, 2, 3, 4);
+console.log(arr);
 
-//         arr2[arr2.indexOf(10)] = 14;
-//     }
-//     console.log(arr2);
+//shift
+arr = [1, 2, 3];
+arr.shift(5);
+console.log(arr);
 
+//merge
+let a = [1, 2];
+let b = [3, 4];
+let c = a.concat(b);
+console.log(c); // [1, 2, 3, 4]
 
-// }
-// ele(arr2);
+//all methods
+//for in loop
+//majorly used for objects
+const student = {
+    name: "sachin",
+    age: 22,
+    course: "MERN"
+};
+for (let key in student) {
+    console.log(key, " : ", student[key]);
+}
 
-// console.log(arr2.lastIndexOf(5));
+arr = [10, 20, 30];
+for (let index in arr) {
+    console.log(index, " : ", arr[index])
+}
+let fruits = ["apple", "banana", "mango"];
 
-//Slice method  (piece of array)
-let arr = [2, 10, 6, 4, 9];
-// console.log(arr.slice(1, 4)); //slice dosent change the original array.
-// console.log(arr.slice(1));
-// console.log(arr.slice());
+for (let x in fruits) {
+    console.log("in:", x);
+}
 
-//Splice
-//console.log(arr.splice(1, 3));// affects the original array anf delete that portion.
-
-//console.log(arr);
-
-//concat
-let arr3 = [-2, -5, -8, -5423, -5, -35, -23, -5, -235];
-//console.log(arr.concat(arr3));//H.W---> concat multiple arrays
-
-
-//For in loop
-let name = ["sa", "asd", "gfd", "sdfsd"];
-// let numbers = [1, 23, 345, 65, 34, 5, 323]
-// for (let index in numbers) {
-//     console.log(index)
-// }
-
-//for of loop
-
-// for (let value of numbers) {
-//     console.log(value);
-
-// }
-
-// let A = [12, 4, -8, 10];
-// let B = [];
-// let sum = 0;
-// for (let i = 0; i < A.length; i++) {
-//     sum += A[i];
-//     B.push(sum);
-
-// }
-
-// console.log(B);
-
+for (let y of fruits) {
+    console.log("of:", y);
+}
 //Swapping
-// let k = 5, l = 10;
-// let temp = k;
-// k = l;
-// l = temp;
-// console.log(k, l);
+let m = 10, n = 20;
+[m, n] = [n, m];
+//console.log(m, n);
 
-//swapping two numbers in array
-// let n=[1,3,4,8,5,6,7]; index=3,index1=6
+arr = [4, 5, 64, 6, 3, 45, 45, 4, 5, 35, 4];
+let temp = arr[0];
+arr[0] = arr[1];
+arr[1] = temp;
+//console.log(arr)
 
-//o/p  n=[1,3,4,7,5,6,8];
-
-// H/W do above by using func
-
-//Print element at odd indices
-//method 1
-// let arr4 = [1, 2, 3, 4, 5, 6];
-// for (let i = 0; i < arr4.length; i++) {  //////time complexity O(6)
-//     if (i % 2 != 0) {
-//         console.log(arr4[i]);
-//     }
-// }
-
-//method 1
-// let arr6 = [1, 2, 3, 4, 5, 6];
-// for (let i = 1; i < arr6.length; i += 2) {  //////time complexity O(6)
-
-//     console.log(arr6[i]);
-
-// }
-
+//print elements at odd indices
+arr = [3, 4, 5, 6, 7, 4, 23, 5, 4, 3];
+for (let i = 0; i < arr.length; i++) {
+    if (i % 2 !== 0) {
+        console.log(arr[i]);
+    }
+}
 
 //Swap alternate element
-// let arr5 = [1, 2, 3, 4, 5, 6];
-// for (let i = 0; i < arr5.length - 1; i += 2) {
-//     let temp = arr5[i];
-//     arr5[i] = arr5[i + 1];
-//     arr5[i + 1] = temp;
-// }
-// console.log(arr5);
+arr = [1, 2, 3, 4, 5];
+for (let i = 0; i < arr.length - 1; i++) {
+    let temp = arr[i];
+    arr[i] = arr[i + 1];
+    arr[i + 1] = temp;
 
-//Swap alternate element
+}
+//console.log(arr);
+console.log("========================================")
+//array of consicutive numbers but print num that are missing
+arr = [1, 2, 3, 4, 6, 7, 9];
 
-// let arr5 = [1, 2, 3, 4, 5];
-// function SwapAltElement(arr5) {
+let count = arr[0]; // start from 1
+
+for (let i = 0; i < arr.length; i++) {
+    while (count < arr[i]) {   // print all missing before current number
+        console.log(count);
+        count++;
+    }
+    count = arr[i] + 1; // move past current number
+}
+
+//subarrays print
+function printSubarrays(arr) {
+    let n = arr.length;
+    for (let i = 0; i < n; i++) {
+        let subarr = [];
+        for (let j = i; j < n; j++) {
+            subarr.push(arr[j]);
+            console.log(subarr.join(" "));
 
 
-//     for (let i = 0; i < arr5.length - 1; i += 2) {
-//         let temp = arr5[i];
-//         arr5[i] = arr5[i + 1];
-//         arr5[i + 1] = temp;
-//     }
-//     console.log(arr5);
-// }
-// SwapAltElement(arr5);
+        }
+    }
+}
+//printSubarrays([1, 2, 3]);
 
-//Heterogenus property of array
-arr = [1, 2, "123", 2.344, true, [3, 4, "five", [2, 5, "PrintMe"]]];
-//print printme
-//console.log(arr[5][3][2]);
+//print sum of all subarrays 
+function printSub(arr) {
+    let n = arr.length;
+    for (let i = 0; i < n; i++) {
+        let subarr = [];
+        let sum = 0;
+        for (let j = i; j < n; j++) {
 
-/* H.W--> Question Given an array of consicutive numbers, but theres are numbers that missing */
+            sum += arr[j];
+            subarr.push(arr[j]);
 
-// arr = [1, 2, 3, 4, 5, 6, 8];
-// let n = arr.length * (arr.length + 1) / 2;
-// let sum = 0;
-// for (let i = 0; i < arr.length; i++) {
-//     sum += arr[i];
-// }
-// let missingNo = n - sum;
-// console.log("missing No is ", missingNo);
+            console.log(subarr.join(" "), sum);
+        }
+    }
+}
+//printSub([1, 2, 3]);
 
+function targSumSubarray(arr, k) {
+    let n = arr.length;
+    for (let i = 0; i < n; i++) {
+        let subarr = [];
+        let sum = 0;
+        for (let j = i; j < n; j++) {
+            sum += arr[j];
+            subarr.push(arr[j]);
+            if (sum == k) {
+                console.log(subarr.join(" "));
+            }
+
+
+        }
+    }
+}
+targSumSubarray([1, 2, 3, 4, 5], 5);

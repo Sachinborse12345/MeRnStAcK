@@ -1,17 +1,17 @@
-//Arrays
+// Arrays
 // Arrays removes the pain of creating multiple variable for same type of Data.
-//A collection of same type of data,that can be managed /accesed using one varible only.
+// A collection of same type of data,that can be managed /accesed using one varible only.
 
-//Arrays are non primitive data type.
-//we can declare array with const variable but still we can change its elements.
+// Arrays are non primitive data type.
+// we can declare array with const variable but still we can change its elements.
 
 
-//const A=[1,2,3,4,5];
-// const names = ["Name1", "Name2", "Name3"];
-// console.log(names);
-// for (let i = 0; i < names.length; i++) {
-//     console.log(names[i]);
-// }
+const A = [1, 2, 3, 4, 5];
+const names = ["Name1", "Name2", "Name3"];
+console.log(names);
+for (let i = 0; i < names.length; i++) {
+    console.log(names[i]);
+}
 
 
 // //Question-> find the sum of all odd elements

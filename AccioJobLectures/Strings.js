@@ -20,11 +20,7 @@ let str3 = str1.toLowerCase();//output: hello world
 console.log(str3);
 // 4. indexOf()
 //indestOf() method returns the index of the first occurrence of a specified text in a string. If the text is not found, it returns -1.
-
-let index = str1.indexOf("o");
-console.log(index);
-
-
+let index = str1.indexOf("o"); console.log(index);
 // 5. lastIndexOf()
 let lastIndex = str1.lastIndexOf("o");
 console.log(lastIndex);
@@ -109,5 +105,202 @@ for (let i = 0; i < str.length; i++) {
         console.log(str.slice(i, j));
     }
 }
+
+
+//reverse a string
+console.log("reverse a string");
+let strr = "abcd";
+let reversedStr = "";
+for (let i = strr.length - 1; i >= 0; i--) {
+    reversedStr += strr[i];
+}
+console.log(reversedStr);
+
+//palindrome or not
+console.log("palindrome or not");
+let strrr = "madam";
+let reversedStrr = "";
+for (let i = strrr.length - 1; i >= 0; i--) {
+    reversedStrr += strrr[i];
+}
+
+if (strrr === reversedStrr) {
+    console.log("palindrome");
+}
+
+/*======================Strings Day 2============================*/
+console.log("Strings Day 2");
+//split() use to split str in array of string
+str = "hii raj my best friend";
+let arr = str.split(" ");//split by space   
+//console.log(arr);
+
+arr = str.split("i");
+//console.log(arr);//['h', '', ' raj my best fr', 'end']
+
+arr = str.split("");
+//console.log(arr);//each char in array
+
+//join() use to join array of string to single string
+let arr1 = ['h', 'e', 'l', 'l', 'o'];
+let str7 = arr1.join("");
+//console.log(str1); //output: hello
+
+str1 = arr1.join(" ");
+//console.log(str1); //output: h e l l o
+
+str1 = arr1.join("-");
+//console.log(str1); //output: h-e-l-l-o
+
+//Question
+
+//output: hELlO
+
+function togglecase(str10) {
+    let name = "";
+    for (let i = 0; i < str10.length; i++) {
+        if (str[i].toLowerCase()) {
+            name[i] += str10[i].toUpperCase();
+        }
+        else {
+            name[i] += str10[i].toLowerCase();
+        }
+
+
+    }
+    console.log(name);
+
+}
+togglecase("HelLo");
+
+//camelcase to snakecase
+
+function camelToSnake(str) {
+    let newStr = "";
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === str[i].toUpperCase()) {
+            newStr += "_" + str[i].toLowerCase();
+        }
+        else {
+            newStr += str[i];
+        }
+    }
+    console.log(newStr);
+
+}
+camelToSnake("helloWorldThisIsMe"); //hello_world_this_is_me
+
+//snakecase to camelcase
+function snakeToCamel(str) {
+    let newStr = "";
+    for (let i = 0; i < str.length; i++) {
+
+        if (str[i] === "_") {
+
+            newStr += str[i + 1].toUpperCase();
+            i++;
+        }
+        else {
+            newStr += str[i];
+        }
+    }
+    console.log(newStr);
+}
+snakeToCamel("hello_world_this_is_me"); //helloWorldThisIsMe
+
+
+
+//Extrace jungle from the string
+str = "  How_are_you_in Jungle!  ";//output print Jungle
+str = str.trim();
+
+console.log(str.trim().split(" ")[1].split("!")[0]);
+
+//only use replace and replaceAll method and replace "in
+str = "How are you in Spain, which city are you in? How's your pain?";
+//only change in to on but not in spain
+//output: How are you on Spain, which city are you on?
+str = str.replaceAll(" in ", " on ");
+str = str.replaceAll(" in", " on");
+str = str.replaceAll("in?", "on?");
+
+console.log(str);
+
+//palindrome or not 
+
+function isPalindrome(str) {
+    str = "madam";
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] !== str[str.length - 1 - i]) {
+
+            return false;
+        }
+    }
+    return true;
+}
+console.log(isPalindrome("madam"));
+
+
+//
+// str = "Nurses Run";
+// str = str.toLowerCase().replaceAll(" ", "");
+// console.log(str);
+// function isPalindrome(str) {
+//     for (let i = 0; i < str.length; i++) {
+//         if (str[i] != str[str.length - 1 - i]) {
+//             return false;
+
+//         }
+//     } return true;
+// }
+// console.log(isPalindrome(str));
+
+// str = "Pune is the most loved city for its weather"
+// //output=7
+// let nextstr = str.split(" ");
+// console.log(nextstr.length);
+// let count = 0;
+// for (let i = 0; i < nextstr.length; i++) {
+//     count++;
+// }
+// console.log(count);
+
+
+//Write a function to find the first non-repeating character in a string
+//input: "StringMethodsring";
+//output: "M"
+console.log("first non repeating char");
+function firstNonRepeatingChar(str) {
+    let charCount = {};
+    // Count occurrences of each character
+    for (let char of str) {
+        char = char.toLowerCase(); // Case insensitive
+        charCount[char] = (charCount[char] || 0) + 1;
+    }
+    // Find the first non-repeating character
+    for (let char of str) {
+        if (charCount[char.toLowerCase()] === 1) {
+            return char;
+        }
+    }
+    return null; // If all characters repeat
+}
+
+//function to find the frequency of each character in a string
+console.log("frequency of each char");
+function charFrequency(str) {
+    let frequency = {};
+    for (let char of str) {
+        char = char.toLowerCase(); // Case insensitive
+        frequency[char] = (frequency[char] || 0) + 1;
+    }
+    return frequency;
+}
+console.log(charFrequency("StringMethodsring"));    
+
+//Write s function to count the frequency of each word in a string
+console.log("frequency of each word");
+str="abd ghj abd ghi ghj abc abd";
+
 
 
