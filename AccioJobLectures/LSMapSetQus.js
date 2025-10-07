@@ -34,13 +34,15 @@ linearSearch([1, 4, 65, 4, 32, 56, 34], 4);
  * - values(): Returns an iterator of the Map's values.
  * - entries(): Returns an iterator of the Map's [key, value] pairs.
  */
+
+// Summary 
+// Goal: Count pairs in an array that sum to a target. 
+// Approach: Use a map for fast lookup, count pairs, adjust for duplicates.
 function findsum(arr, n, target) {
     let map = new Map();
     let count = 0;
-    for (let i = 0; i < n; i++) {
-        let num = arr[i];
+    for (let num of arr) {
         map.set(num, (map.get(num) || 0) + 1);
-
     }
     for (let i = 0; i < n; i++) {
         let num = arr[i];
@@ -53,6 +55,7 @@ function findsum(arr, n, target) {
     } return Math.floor(count / 2);
 }
 console.log(findsum([1, 3, 5, 6, 1], 5, 7));
+
 
 
 /*
@@ -69,6 +72,8 @@ console.log(findsum([1, 3, 5, 6, 1], 5, 7));
  * - values(): Returns an iterator of the Set's values.
  */
 
+
+
 // Example usage of Set:
 const mySet = new Set();
 mySet.add(1);
@@ -79,6 +84,9 @@ console.log(mySet.has(1)); // true
 console.log(mySet.size); // 3
 mySet.delete(2);
 console.log([...mySet]); // [1, 'hello']
+
+
+
 //Anagram Deletions
 function minDeletions(word1, word2) {
     let freq1 = new Map();
@@ -101,4 +109,4 @@ function minDeletions(word1, word2) {
     return deletions;
 
 }
-console.log(minDeletions("Silentfds", "listengh"));
+console.log(minDeletions("Silent", "listen"));
