@@ -21,15 +21,15 @@ Input:
 Output:
 189*/
 
-let sum = 0;
+// let sum = 0;
 
-while (n > 0) {
-    let digit = n % 10;
-    sum += digit * digit * digit;
-    n = Math.floor(n / 10);
-}
+// while (n > 0) {
+//     let digit = n % 10;
+//     sum += digit * digit * digit;
+//     n = Math.floor(n / 10);
+// }
 
-console.log(sum);
+// console.log(sum);
 
 /*Prime Numbers Range
 Given an integer n, print all prime numbers between 1 and n (both inclusive).
@@ -78,7 +78,7 @@ function isPrime(num) {
 
     return true;
 }
-isPrime(11);
+console.log(isPrime());
 
 /*Problem: Print Hollow Diamond Pattern
 Problem Statement
@@ -105,11 +105,12 @@ Output:
 
 function printHollowDiamond(n) {
 
-
+    // Upper half
     for (let i = 1; i <= n; i++) {
         let line = ' '.repeat(n - i);
         if (i === 1) {
             line += '*';
+        } else {
             line += '*' + ' '.repeat(2 * (i - 1) - 1) + '*';
         }
         console.log(line);
@@ -126,3 +127,4 @@ function printHollowDiamond(n) {
         console.log(line);
     }
 }
+printHollowDiamond(5);
