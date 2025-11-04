@@ -37,7 +37,8 @@
 //     console.log(i);
 // }
 // continue 
-//print the square of all numbers from 1 to 100, except the numbers divisible by 17
+// print the square of all numbers from 1 to 100,
+//  except the numbers divisible by 17
 // let divisor = 17;
 // for (let i = 0; i <= 100; i++) {
 //     if (i % divisor == 0) {
