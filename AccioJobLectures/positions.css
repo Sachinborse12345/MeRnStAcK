@@ -1,0 +1,60 @@
+/** Position: [specify position in the code, e.g., "line 10-20"]
+
+**/
+
+body{
+    background-color: rgb(143, 238, 238);
+}
+.child {
+    text-align: center;
+    margin: 10px;
+}
+
+#one {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(102, 2, 252);
+    position: fixed;
+    top: 20px;
+    left: 20px;
+}
+
+#two {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 0, 0);
+   position: fixed;
+    top: 20px;
+    right: 20px;
+
+}
+
+#three {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(55, 255, 6);
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+
+}
+#four {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 0, 153);
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+}
+#five {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 21, 0);
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

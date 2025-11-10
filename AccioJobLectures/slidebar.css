@@ -1,0 +1,72 @@
+
+        .navbar{
+            margin-bottom: 5px;
+            border: 2px solid #333 ;
+            display: flex;
+
+        }
+    
+        .sidebar {
+    width: 200px;
+    padding: 20px;
+    border-top: 2px solid #333;
+    border-right: 2px solid #333;
+    border-bottom: 2px solid #333;
+    height: 100vh;
+}
+
+#sb-heading {
+    color: #eb00fc;
+    margin-bottom: 20px;
+}
+
+.sb-item {
+    padding: 10px;
+    margin: 5px 0;
+    color: #000000;
+    transition: all 0.3s ease;
+}
+
+.sb-item {
+    transition: 0.3s ease;   /* smooth movement */
+}
+
+.sb-item:hover {
+    font-weight: bold;
+    color: #eb00fc;
+    cursor: pointer;
+    transform: translateX(6px);  /* move slightly right */
+}
+
+
+#one:hover {
+    color: #8cff00;
+    font-weight: bold;
+    cursor: pointer;
+    transform: translateX(6px);  /* soft slide to the right */
+}
+#two:hover {
+    color: #ff1900;
+    font-weight: bold;
+    cursor: pointer;
+    transform: translateX(6px);  /* soft slide to the right */
+}
+#three:hover {
+    color: #4c00ff;
+    font-weight: bold;
+    cursor: pointer;
+    transform: translateX(6px);  /* soft slide to the right */
+}
+#four:hover {
+    color: #ff00ea;
+    font-weight: bold;
+    cursor: pointer;
+    transform: translateX(6px);  /* soft slide to the right */
+}
+#sb-heading:hover {
+    color: #00bbff;
+    font-weight: bold;
+    cursor: pointer;
+    transform: translateX(6px);
+     transition: 0.3s ease;  /* soft slide to the right */
+}
