@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: azure;
+      }
+      .mydiv {
+        margin: 100px;
+        height: 300px;
+        width: 350px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      #h2 {
+        margin: 0;
+        font-size: xx-large;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      #button {
+        margin: 10px;
+        height: 20%;
+        width: 40%;
+        color: rgb(255, 255, 255);
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        background-color: rgb(42, 149, 215);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mydiv">
+      <h2 id="h2">Limit Counter (0-10)</h2>
+      <h1 id="one">0</h1>
+      <button id="button">Add</button>
+      <p id="para">add more into this cart</p>
+    </div>
+
+    <script>
+      document.getElementById("button").addEventListener("click", function () {
+        const one = document.getElementById("one");
+        const para = document.getElementById("para");
+        let value = Number(one.textContent);
+        if (value < 10) {
+          value++;
+          one.textContent = value;
+          para.textContent = "number increased! ";
+        } else {
+          para.textContent = "limit reached! You cannot go above 10";
+        }
+      });
+    </script>
+  </body>
+</html>

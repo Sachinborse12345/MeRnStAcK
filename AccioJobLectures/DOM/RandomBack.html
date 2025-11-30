@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Background</title>
+    <style>
+      body {
+        background-color: aliceblue;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="ranbg">Random BackGround</button>
+    <script>
+      console.log(Math.floor(Math.random() * 256));
+      console.log(Math.floor(Math.random() * 256));
+      console.log(Math.floor(Math.random() * 256));
+      document.getElementById("ranbg").addEventListener("click", function () {
+        const r = Math.floor(Math.random() * 256);
+        const g = Math.floor(Math.random() * 256);
+        const b = Math.floor(Math.random() * 256);
+        document.body.style.backgroundColor = `rgb(${r},${g},${b})`;
+      });
+    </script>
+  </body>
+</html>
