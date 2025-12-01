@@ -7,6 +7,10 @@
     <style>
       body {
         background-color: azure;
+        display:flex;
+        justify-content: center;
+        text-align: center;
+
       }
       .mydiv {
         margin: 100px;
@@ -14,14 +18,19 @@
         width: 350px;
         background-color: rgb(255, 255, 255);
         border-radius: 10px;
+        border:2px  solid black;
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
+
+
       }
       #h2 {
         margin: 0;
         font-size: xx-large;
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
       }
       #button {
         margin: 10px;
@@ -31,7 +40,8 @@
         padding: 10px;
         border-radius: 10px;
         border: none;
-        background-color: rgb(42, 149, 215);
+        background-color: rgb(0, 255, 153);
+        
       }
     </style>
   </head>
@@ -41,6 +51,8 @@
       <h1 id="one">0</h1>
       <button id="button">Add</button>
       <p id="para">add more into this cart</p>
+
+  
     </div>
 
     <script>
@@ -49,11 +61,15 @@
         const para = document.getElementById("para");
         let value = Number(one.textContent);
         if (value < 10) {
+          
           value++;
           one.textContent = value;
-          para.textContent = "number increased! ";
+          para.textContent = "number increased!";
+
         } else {
+
           para.textContent = "limit reached! You cannot go above 10";
+
         }
       });
     </script>

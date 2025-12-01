@@ -106,33 +106,26 @@
 
     <script>
       // Image hover
-      document
-        .getElementById("prodImg")
-        .addEventListener("mouseover", function () {
-          prodImage.style.transform = "scale(1.05)";
-        });
+      const prodImage = document.getElementById("prodImage");
+      prodImage.addEventListener("mouseover", function () {
+        prodImage.style.transform = "scale(1.05)";
+      });
 
-      document
-        .getElementById("prodImage")
-        .addEventListener("mouseout", function () {
-          document.getElementById("productCardd").style.transform = "scale(1)";
-        });
+      prodImage.addEventListener("mouseout", function () {
+        prodImage.style.transform = "scale(1)";
+      });
 
-      // Add to cart
+      let count = 0;
       document.getElementById("addBtn").addEventListener("click", function () {
-        let count = document.getElementById("cartCount").textContent;
-        value = value + 1;
-        count.textContent = value;
-        document.getElementById("productCard").style.background = "#fff6ce";
-        document.getElementById("title").textContent = "Premium Chocolate";
+        count++;
+        document.getElementById("cartCount").textContent = `${count}`;
       });
 
       // Wishlist
-      document
-        .getElementById("heartIcon")
-        .addEventListener("click", function () {
-          heartIcon.style.color = "red";
-        });
+      const heartIcon = document.getElementById("heartIcon");
+      heartIcon.addEventListener("click", function () {
+        heartIcon.style.color = "red";
+      });
     </script>
   </body>
 </html>

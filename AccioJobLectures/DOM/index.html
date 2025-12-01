@@ -3,45 +3,86 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Add to cart</title>
+
     <style>
       body {
-        background-color: azure;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
       }
       .mydiv {
-        margin: 100px;
-        height: 300px;
-        width: 350px;
-        background-color: rgb(255, 255, 255);
-        border-radius: 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+      height: 260px;
+      width: 320px;
+      background: rgba(117, 29, 200, 0.95);
+      border: none;
+      border-radius: 18px;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      padding: 24px 0;
       }
-      #h2{
-        margin-top: 20px;
-        font-size: xx-large;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      #h2 {
+      color: #fff;
+      font-size: 1.6rem;
+      margin: 0;
+      letter-spacing: 1px;
+      font-weight: 600;
 
       }
-      #button{
-        margin: 50px;
-        color: rgb(255, 255, 255);
-        padding: 10px;
-        border-radius: 10px;
-        background-color: rgb(42, 149, 215);
+      #button {
+      background: linear-gradient(90deg, #ff8a00 0%, #e52e71 100%);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 28px;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+      box-shadow: 0 2px 8px rgba(229, 46, 113, 0.15);
       }
-
+      #button:hover {
+      background: linear-gradient(90deg, #e52e71 0%, #ff8a00 100%);
+      transform: translateY(-2px) scale(1.04);
+      }
+      #para {
+      color: #f3e9ff;
+      font-size: 1.1rem;
+      margin: 0;
+      letter-spacing: 0.5px;
+      min-height: 24px;
+      }
     </style>
   </head>
   <body>
     <div class="mydiv">
       <h2 id="h2">Simple add to cart</h2>
       <button id="button">Add to Cart</button>
-      <p id="para">Try Hover, Click, or mover away.</p>
+      <p id="para">Please add.</p>
     </div>
     <script>
-      const
+      let count = 0;
+      document.getElementById("button").addEventListener("click", function () {
+        count++;
+        document.getElementById("para").innerText =
+          `${count}` + " item just added ";
+        if (count > 10) {
+          document.getElementById("para").innerText = " Your bag is full ";
+          console.log("your bag has full already");
+        }
+
+        return;
+      });
     </script>
   </body>
 </html>
